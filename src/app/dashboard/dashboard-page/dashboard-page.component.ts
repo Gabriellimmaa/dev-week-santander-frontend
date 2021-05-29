@@ -1,6 +1,6 @@
-import { DashboardService } from './../dashboard.service';
 import { Component, OnInit } from '@angular/core';
-import Stock from 'src/app/shared/models/stock-model'
+import Stock from 'src/app/shared/models/stock-model';
+import { DashboardService } from '../dashboard.service';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -19,7 +19,6 @@ export class DashboardPageComponent implements OnInit {
 
   async fetchStocks(): Promise<void> {
     this.stocks = await this.dashboardService.getStocks();
-    console.log(this.stocks);
   }
 
 }

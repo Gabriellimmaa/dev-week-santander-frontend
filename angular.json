@@ -101,9 +101,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "/dev-week-santander-frontend/"
-          }
+          "options": {}
         }
       }
     }

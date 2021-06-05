@@ -1,0 +1,72 @@
+<div class="container">
+  <form [formGroup]="myForm" novalidate>
+    <div class="form">
+      <div class="statusInput" [innerHTML]="this.statusName"></div>
+      <div class="input-container">
+        <i class="fa fa-user icon" aria-hidden="true"></i>
+        <input #nome id="inputName" type="text" placeholder="Nome" formControlName="username"><br/>
+      </div>
+
+      <div class="statusInput" [innerHTML]="this.statusPrice"></div>
+      <div class="input-container">
+        <i class="fa fa-money icon" aria-hidden="true"></i>
+        <input #preco id="inputPrice" type="number" placeholder="Preço" formControlName="price" >
+      </div>
+
+      <div class="statusInput" [innerHTML]="this.statusVari"></div>
+      <div class="input-container">
+        <i class="fa fa-sort-amount-desc icon" aria-hidden="true"></i>
+        <input #variacao id="inputVariation" type="number" placeholder="Variação" formControlName="variation">
+      </div>
+
+      <div class="statusInput" [innerHTML]="this.statusDate"></div>
+      <div class="input-container">
+        <i class="fa fa-calendar icon" aria-hidden="true"></i>
+        <input #date id="inputDate" type="date" formControlName="date">
+      </div>
+
+      <div class="input-container">
+        <button (click)="submit(nome.value, preco.valueAsNumber, variacao.valueAsNumber, date.value)" type="button">Cadastrar</button>
+      </div>
+
+      <div *ngIf="myForm.controls['username'].invalid && (myForm.controls['username'].dirty || myForm.controls['username'].touched)" class="alert">
+        <div *ngIf="drawRequired(1)"></div>
+      </div>
+      <div *ngIf="myForm.controls['username'].valid" class="alert">
+        <div *ngIf="undrawRequired(1)"></div>
+      </div>
+      <div *ngIf="myForm.controls['username'].hasError('minlength') && !myForm.controls['username'].hasError('required')" class="alert">
+        <div *ngIf="drawCondition(1)"></div>
+      </div>
+
+      <div *ngIf="myForm.controls['price'].invalid && (myForm.controls['price'].dirty || myForm.controls['price'].touched)" class="alert">
+        <div *ngIf="drawRequired(2)"></div>
+      </div>
+      <div *ngIf="myForm.controls['price'].valid" class="alert">
+        <div *ngIf="undrawRequired(2)"></div>
+      </div>
+      <div *ngIf="myForm.controls['price'].hasError('pattern') && !myForm.controls['price'].hasError('required')" class="alert">
+        <div *ngIf="drawCondition(2)"></div>
+      </div>
+
+      <div *ngIf="myForm.controls['variation'].invalid && (myForm.controls['variation'].dirty || myForm.controls['variation'].touched)" class="alert">
+        <div *ngIf="drawRequired(3)"></div>
+      </div>
+      <div *ngIf="myForm.controls['variation'].valid" class="alert">
+        <div *ngIf="undrawRequired(3)"></div>
+      </div>
+      <div *ngIf="myForm.controls['variation'].hasError('pattern') && !myForm.controls['variation'].hasError('required')" class="alert">
+        <div *ngIf="drawCondition(3)"></div>
+      </div>
+
+      <div *ngIf="myForm.controls['date'].invalid && (myForm.controls['date'].dirty || myForm.controls['date'].touched)" class="alert">
+        <div *ngIf="drawRequired(4)"></div>
+      </div>
+      <div *ngIf="myForm.controls['date'].valid" class="alert">
+        <div *ngIf="undrawRequired(4)"></div>
+      </div>
+
+      <div class="center" [innerHTML]="'<b>'+this.status"></div>
+    </div>
+  </form>
+</div>

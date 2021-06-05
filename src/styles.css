@@ -1,11 +1,15 @@
+
 :root {
   --background-color: #EAEAEA;
   --primary-color: #EA1D25;
+  --primary-color-black: #bb171e;
   --secondary-color: #FFFFFF;
   --text-color: #5C6369;
   --text-color-light: rgba(92, 99, 105, 0.45);
   --positive-variation-color: #87D883;
   --negative-variation-color: #F55A5F;
+  --white: #FFFFFF;
+  --leftBar: #8c1116;
 }
 
 * {

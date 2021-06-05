@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="divIcon">
+    <div (click)="MenuLateral()" class="fa fa-bars icon"></div>
+  </div>
+  <div id="showBar">
+    <div class="leftBar">
+      <button id='goCadastrar' (click)="goPages(1)" class="btn btn-primary" type="button">Cadastrar</button>
+      <button id='goConsultar' (click)="goPages(2)" class="btn btn-primary" type="button">Consultar</button>
+      <button id='goConsultar-id' (click)="goPages(3)" class="btn btn-primary" type="button">Consultar ID</button>
+      <button id='goCadastrar-day' (click)="goPages(4)" class="btn btn-primary" type="button">Consultar Diario</button>
+      <button id='goDeletar' (click)="goPages(5)" class="btn btn-primary" type="button">Deletar</button>
+      <button id='goUpdate' (click)="goPages(6)" class="btn btn-primary" type="button">Atualizar</button>
+      <button (click)="logout()" class="btn btn-primary logout" type="button">Logout</button>
+    </div>
+  </div>
+  <div class="pageContainer" id="showPage">
+    <app-cadastrar *ngIf="CadastrarLoaded"></app-cadastrar>
+    <div class='consultarPage'>
+      <app-consultar *ngIf="ConsultarLoaded"></app-consultar>
+    </div>
+    <app-consultar-id *ngIf="ConsultarIDLoaded"></app-consultar-id>
+    <app-consultar-day *ngIf="ConsultarDayLoaded"></app-consultar-day>
+    <app-deletar *ngIf="DeletarLoaded"></app-deletar>
+    <app-atualizar *ngIf="AtualizarLoaded"></app-atualizar>
+  </div>
+</div>

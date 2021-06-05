@@ -1,0 +1,8 @@
+<div class="container">
+  <img src="assets/Santander-Banner.png" alt="Banner Santander" width="80%" height="auto">
+  <div class="form">
+    <input #email type="text" placeholder="Username / Email">
+    <input #pass type="password" placeholder="Password" id="inputPassword">
+    <button (click)="submit(email.value, pass.value)" type="button">Submit</button>
+  </div>
+</div>

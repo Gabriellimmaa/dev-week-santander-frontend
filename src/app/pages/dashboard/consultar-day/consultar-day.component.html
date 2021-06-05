@@ -1,0 +1,19 @@
+<div class="container">
+  <pagination-controls class="pageControl"
+  (pageChange)="p = $event"
+  previousLabel="Anterior"
+  nextLabel="Proxima"
+  screenReaderPaginationLabel="Pagination"
+  screenReaderPageLabel="Proxima página"
+  screenReaderCurrentLabel="Você está nessa página">
+  </pagination-controls>
+
+  <div *ngIf="status == true" style="margin-left: 50px;" [innerHTML]="'<b> Registros: '+this.statusMessage"></div><br/>
+
+  <div class="cards">
+    <ul>
+      <app-card *ngFor="let stock of stocksAll | paginate: { itemsPerPage:9, currentPage: p }" [stock]="stock"></app-card>
+    </ul>
+  </div>
+</div>
+

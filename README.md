@@ -7,10 +7,10 @@ Ao entrar aguarde alguns segundos até que a backend saia do modo "soneca"
 
 ![](https://cdn.discordapp.com/attachments/771470980324524043/847594651405385778/linha.png)<br /> 
 
-# Backend
+# Frontend
 
-  - Preparação do ambiente
-  - Criação de uma API usando Spring Boot (Spring Web)
-  - Integrando a API com um banco de dados relacional (Spring Data JPA)
+  - Paginas home, login, dashboard
+  - Comunicação com backend
+  - Post, delete e put
 
 ![](https://cdn.discordapp.com/attachments/771470980324524043/847594346516971520/dev-week.png)

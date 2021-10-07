@@ -12,5 +12,6 @@ Ao entrar aguarde alguns segundos até que a backend saia do modo "soneca"
   - Paginas home, login, dashboard
   - Comunicação com backend
   - Post, delete e put
+  - Site todo responsivo 
 
 ![](https://cdn.discordapp.com/attachments/771470980324524043/847594346516971520/dev-week.png)
